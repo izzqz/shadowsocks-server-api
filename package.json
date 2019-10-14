@@ -6,5 +6,8 @@
   "repository": "https://github.com/DrZZQ/shadowsocks-api.git",
   "author": "ZZQ <ZZGaming@list.ru>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "request-promise": "^4.2.4"
+  }
 }
