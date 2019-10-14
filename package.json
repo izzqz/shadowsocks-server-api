@@ -1,0 +1,10 @@
+{
+  "name": "shadowsocks-api",
+  "version": "0.0.1",
+  "description": "npm module for working with shadowsocks-restful-api",
+  "main": "index.js",
+  "repository": "https://github.com/DrZZQ/shadowsocks-api.git",
+  "author": "ZZQ <ZZGaming@list.ru>",
+  "license": "MIT",
+  "private": true
+}
