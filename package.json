@@ -8,12 +8,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bluebird": "^3.7.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "node test/test.js"
+    "test": "node test.js"
   }
 }
