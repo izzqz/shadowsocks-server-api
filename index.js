@@ -7,3 +7,9 @@
 [ ] shadowsocks-api.get.ping
 [ ] shadowsocks-api.get.allPorts
 */
+
+function SsApi() {
+  this.getPing = require('./lib/getPing.js')
+}
+
+module.exports = SsApi
