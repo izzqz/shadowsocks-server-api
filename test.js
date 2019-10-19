@@ -1,27 +1,76 @@
-// const request = require('request')
-//
-// const options = {
-//   method: 'GET',
-//   url: 'https://198.13.32.73:4001/ping',
-//   headers: {
-//     Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzEzODcyNjQsImV4cCI6MTU3MTQ3MzY2NH0.3DSpBSMKj8El7VOThoTtsNncZNafTXotSaqnHkoa_5w'
-//   },
-//   rejectUnauthorized: false,
-//   requestCert: true,
-//   agent: false,
-// }
-
+'use strict'
 const SsApi = require('./index.js')
-ssApi = new SsApi()
+const ssApi = new SsApi()
 
 let server = {
-  name: 'jP1',
-  domain: 'jp1.yolk.network',
-  host: '198.13.32.73:4001',
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzEzODcyNjQsImV4cCI6MTU3MTQ3MzY2NH0.3DSpBSMKj8El7VOThoTtsNncZNafTXotSaqnHkoa_5w',
-  password: '12345'
+  host: 'localhost',
+  port: '4001',
+  token: 'your_authentication_token',
+  password: 'pleaseChangeThisPassword'
 }
 
-ssApi.getPing(server, body => {
-  console.log(body)
+let portConfig = {
+  port: "12005",
+  password: "1",
+  method: "chacha20"
+}
+
+ssApi.login(server, (error, response, token) => {
+  console.log('login function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log('token: ' + token + '\n\n')
+  }
+})
+
+ssApi.getPing(server, (error, response, body) => {
+  console.log('getPing function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log('get ping: ' + body + '\n\n')
+  }
+})
+
+ssApi.addPort(server, portConfig, (error, response) => {
+  console.log('addPort function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log('\n\n')
+  }
+})
+
+ssApi.getPorts(server, (error, response, body) => {
+  console.log('getPorts function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log(body + '\n\n')
+  }
+})
+
+ssApi.getTrafic(server, (error, response, body) => {
+  console.log('getTrafic function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log(body + '\n\n')
+  }
+})
+
+ssApi.deletePort(server, portConfig.port, (error, response) => {
+  console.log('deletePort function...')
+  console.log('status code: ' + response.statusCode)
+  if (error) {
+    throw new Error(error)
+  } else {
+    console.log('\n\n')
+  }
 })
