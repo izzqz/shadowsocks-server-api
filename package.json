@@ -1,17 +1,15 @@
 {
   "name": "shadowsocks-server-api",
-  "version": "0.5.1",
+  "version": "1.1.0",
   "description": "npm module for working with shadowsocks-restful-api",
   "main": "index.js",
   "repository": "https://github.com/DrZZQ/shadowsocks-api.git",
   "author": "ZZQ <ZZGaming@list.ru>",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "request": "^2.88.0"
   },
   "scripts": {
-    "start": "node index.js",
     "test": "node test/test.js"
   }
 }
