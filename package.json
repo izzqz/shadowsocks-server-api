@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "Node.js library to communicate with the shadowsocks-restful-api",
   "main": "index.js",
-  "repository": "https://github.com/DrZZQ/shadowsocks-api.git",
+  "repository": "https://github.com/DrZZQ/shadowsocks-server-api.git",
   "author": "ZZQ <ZZGaming@list.ru>",
   "license": "MIT",
   "dependencies": {
