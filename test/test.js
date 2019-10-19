@@ -1,5 +1,5 @@
 'use strict'
-const SsApi = require('./index.js')
+const SsApi = require('../index.js')
 const ssApi = new SsApi()
 
 let server = require('./test.config.js')
@@ -17,6 +17,7 @@ ssApi.login(server, (error, response, token) => {
     throw new Error(error)
   } else {
     console.log('token: ' + token + '\n\n')
+    server.token = token
   }
 })
 

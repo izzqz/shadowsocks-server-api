@@ -1,8 +1,8 @@
 let server = {
   host: 'localhost',
-  port: '4001',
-  token: undefined,
+  port: 4001,
+  token: '',
   password: 'pleaseChangeThisPassword'
 }
 
-module.export = server
+module.exports = server
