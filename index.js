@@ -6,6 +6,7 @@ function SsApi() {
   this.addPort = require('./lib/addPort.js')
   this.deletePort = require('./lib/deletePort.js')
   this.getPorts = require('./lib/getPorts.js')
+  this.getTrafic = require('./lib/getTrafic.js')
 }
 
 module.exports = SsApi
