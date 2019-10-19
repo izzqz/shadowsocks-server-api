@@ -2,15 +2,10 @@
 const SsApi = require('./index.js')
 const ssApi = new SsApi()
 
-let server = {
-  host: 'localhost',
-  port: '4001',
-  token: 'your_authentication_token',
-  password: 'pleaseChangeThisPassword'
-}
+let server = require('./test.config.js')
 
 let portConfig = {
-  port: "12005",
+  port: "12001",
   password: "1",
   method: "chacha20"
 }
