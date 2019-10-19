@@ -1,6 +1,6 @@
 {
   "name": "shadowsocks-server-api",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "npm module for working with shadowsocks-restful-api",
   "main": "index.js",
   "repository": "https://github.com/DrZZQ/shadowsocks-api.git",
